@@ -4,6 +4,7 @@ export interface Album {
     cover: string
   }
   
+
   export const listenNowAlbums: Album[] = [
     {
       name: "React Rendezvous",

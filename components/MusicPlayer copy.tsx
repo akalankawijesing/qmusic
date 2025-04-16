@@ -5,6 +5,7 @@ import { useState } from "react";
 
 export default function MusicPlayer() {
   const [currentTrack, setCurrentTrack] = useState([]);
+  
 
   return (
     <div className="fixed bottom-0 left-0 w-full z-50 bg-background shadow-lg border-t border-border p-2">
