@@ -20,7 +20,7 @@ export function Sidebar({ className, playlists }: SidebarProps) {
             Discover
           </h2>
           <div className="space-y-1">
-            <Link href="/login" replace>
+            <Link href="/" replace>
             <Button variant="secondary" className="w-full justify-start">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +38,7 @@ export function Sidebar({ className, playlists }: SidebarProps) {
               Listen Now
             </Button>
             </Link>
-            <Link href="/login" replace>
+            <Link href="/browse" replace>
             <Button variant="ghost" className="w-full justify-start">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +58,7 @@ export function Sidebar({ className, playlists }: SidebarProps) {
               Browse
             </Button>
             </Link>
-            <Link href="/login" replace>
+            <Link href="/radio" replace>
             <Button variant="ghost" className="w-full justify-start">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -33,7 +33,7 @@ export default function TopPicks() {
       try {
         setIsLoading(true);
         const response = await fetch(
-          "https://api.jamendo.com/v3.0/tracks/?client_id=89e87fda&format=jsonpretty&limit=8&include=musicinfo&order=popularity_total_desc&imagesize=600"
+          `https://api.jamendo.com/v3.0/tracks/?client_id=${process.env.NEXT_PUBLIC_JAMENDO_CLIENT_ID}&format=jsonpretty&limit=8&include=musicinfo&order=popularity_total_desc&imagesize=600`
         );
 
         if (!response.ok) {
