@@ -15,7 +15,7 @@ import {
 import { AlbumArtwork } from "@/components/album-artwork"
 import { PodcastEmptyPlaceholder } from "@/components/podcast-empty-placeholder"
 import { Sidebar } from "@/components/sidebar"
-import { listenNowAlbums, madeForYouAlbums } from "../data/albums"
+import { madeForYouAlbums } from "../data/albums"
 import { playlists } from "../data/playlists"
 import TopPicks from "@/components/TopPicks"
 import Link from 'next/link'

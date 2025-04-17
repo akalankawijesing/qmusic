@@ -13,6 +13,15 @@ export interface Album {
   audio: string;
 }
 
+interface JamendoTrack {
+  id: string;
+  name: string;
+  artist_name: string;
+  image: string;
+  audio: string;
+}
+
+
 export default function TopPicks() {
   const [topPicks, setTopPicks] = useState<Album[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -33,7 +42,7 @@ export default function TopPicks() {
 
         const data = await response.json();
 
-        const formattedAlbums = data.results.map((item) => ({
+        const formattedAlbums = data.results.map((item:JamendoTrack) => ({
           name: item.name,
           artist: item.artist_name,
           cover: item.image,

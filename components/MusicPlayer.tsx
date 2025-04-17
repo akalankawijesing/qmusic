@@ -2,6 +2,7 @@
 import AudioPlayer from 'react-h5-audio-player'
 import { useMusicPlayer } from '@/context/MusicPlayerContext'
 import 'react-h5-audio-player/lib/styles.css'
+import Image from 'next/image'
 
 export default function MusicPlayer() {
   const { currentSong, playNext, playPrev } = useMusicPlayer()
@@ -12,7 +13,13 @@ export default function MusicPlayer() {
     <div className="fixed bottom-0 left-0 w-full z-50 bg-background shadow-lg border-t border-border p-2">
       <div className="flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex items-center">
-          <img src={currentSong.cover} alt="Album Cover" className="h-12 w-12 rounded-md" />
+                  <Image
+                        src={currentSong.cover}
+                        alt="Album Cover"
+                        width={208}
+                        height={208}
+                        className="h-12 w-12 rounded-md"
+                      />
           <div className="ml-4">
             <h3 className="text-sm font-semibold leading-tight">{currentSong.title}</h3>
             <p className="text-xs text-muted-foreground">{currentSong.artist}</p>
